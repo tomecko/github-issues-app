@@ -1,6 +1,6 @@
 import { IItem, ItemStatus } from '../model/Item';
 
-export const data: IItem[] = [
+export const mockData: IItem[] = [
   {
     createdAt: new Date('2016-07-19 12:00'),
     favourite: true,

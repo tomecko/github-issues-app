@@ -1,4 +1,4 @@
 import styled from 'styled-components';
 
-export const StyledItemList = styled.div`
+export const StyledItemGroup = styled.div`
 `;
