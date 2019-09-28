@@ -29,7 +29,7 @@ export const mockData: IItem[] = [
     createdAt: new Date('2016-07-15 12:00'),
     favourite: false,
     name: 'Crash update',
-    status: ItemStatus.Open,
+    status: ItemStatus.Closed,
   },
   {
     createdAt: new Date('2016-07-15 12:00'),
