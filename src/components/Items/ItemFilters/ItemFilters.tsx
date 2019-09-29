@@ -3,30 +3,30 @@ import { arrayOf, object, func } from 'prop-types';
 
 import { IItem } from '../../../model/Item';
 
-import { StyledItemFilters } from './StyledItemFilters';
+import { IFilterInfo, IItemFiltersProps } from './props';
+import { StyledCount, StyledItemFilter, StyledItemFilters, StyledName } from './styled';
 
-interface IItemFiltersProps {
-  filter: IFilterInfo;
-  filterInfos: IFilterInfo[];
-  onSelected: (filter: IFilterInfo) => void;
-}
-
-export interface IFilterInfo {
-  filterFn: (item: IItem) => boolean;
-  name: string;
-}
+const getCount = (items: IItem[], filterFn: (item: IItem) => boolean) =>
+  items.filter(filterFn).length;
 
 export const ItemFilters: FunctionComponent<IItemFiltersProps> = props => {
-  const { filter, filterInfos, onSelected } = props;
+  const { filter, filterInfos, items, onSelected } = props;
   return (
     <StyledItemFilters>
       {filterInfos.map((info, i) => (
-        <li
+        <StyledItemFilter
           key={i}
           onClick={() => onSelected(info)}
+          selected={info === filter}
         >
-          {info.name} {filter === info ? '*' : ''}
-        </li>
+          <StyledName>
+            {info.name}
+          </StyledName>
+          {filter === info ? '*' : ''}
+          <StyledCount>
+            {getCount(items, info.filterFn)}
+          </StyledCount>
+        </StyledItemFilter>
       ))}
     </StyledItemFilters>
   );

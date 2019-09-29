@@ -1,54 +1,58 @@
 import React, { FunctionComponent, Validator, useState } from 'react';
-import { arrayOf, object } from 'prop-types';
+import { arrayOf, func, object } from 'prop-types';
 
-import { IItem, ItemStatus } from '../../model/Item';
+import { IItem } from '../../model/Item';
 
 import { ItemFilters, IFilterInfo } from './ItemFilters';
 import { ItemGroup } from './ItemGroup';
 import { getItemGroups } from './getItemGroups';
 
-import { StyledItemGroups } from './StyledItemGroups';
-import { StyledItems } from './StyledItems';
+import { StyledItemGroups, StyledItems, StyledSidebar } from './styled';
 
 interface IItemsProps {
+  filterInfos: IFilterInfo[];
+  groupBy: (item: IItem) => string;
+  groupHeaderFormatter: (key: string) => string;
   items: IItem[];
+  onItemUpdate?: (item: Partial<IItem>) => void;
+  sortGroupsBy?: (a: string, b: string) => number;
 }
 
-const filterInfos: IFilterInfo[] = [
-  {
-    filterFn: () => true,
-    name: 'All',
-  },
-  {
-    filterFn: ({ status }: IItem) => status === ItemStatus.Open,
-    name: 'Open',
-  },
-  {
-    filterFn: ({ status }: IItem) => status === ItemStatus.Closed,
-    name: 'Closed',
-  },
-];
-const defaultFilter = filterInfos[0];
-
-export const Items: FunctionComponent<IItemsProps> = ({ items }) => {
+export const Items: FunctionComponent<IItemsProps> = props => {
+  const {
+    filterInfos,
+    groupBy,
+    groupHeaderFormatter,
+    items,
+    onItemUpdate,
+    sortGroupsBy,
+  } = props;
+  const defaultFilter = filterInfos[0];
   const [filter, setFilter] = useState<IFilterInfo>(defaultFilter);
-
-  const itemGroups = getItemGroups(items, filter.filterFn, ({ createdAt }) => createdAt);
+  const itemGroups = getItemGroups(
+    items,
+    filter.filterFn,
+    groupBy,
+  );
   return (
     <StyledItems>
-      <ItemFilters
-        filter={filter}
-        filterInfos={filterInfos}
-        onSelected={(filter: IFilterInfo) => {
-          setFilter(filter);
-        }}
-      />
+      <StyledSidebar>
+        <ItemFilters
+          filter={filter}
+          filterInfos={filterInfos}
+          items={items}
+          onSelected={(filter: IFilterInfo) => {
+            setFilter(filter);
+          }}
+        />
+      </StyledSidebar>
       <StyledItemGroups>
-        {Object.keys(itemGroups).map(key => (
+        {Object.keys(itemGroups).sort(sortGroupsBy).map(key => (
           <ItemGroup
             key={key}
-            heading={key}
+            heading={groupHeaderFormatter(key)}
             items={itemGroups[key]}
+            onItemUpdate={onItemUpdate}
           />
         ))}
       </StyledItemGroups>
@@ -57,9 +61,17 @@ export const Items: FunctionComponent<IItemsProps> = ({ items }) => {
 }
 
 Items.defaultProps = {
+  sortGroupsBy: (a, b) => a === b
+    ? 0
+    : a < b ? 1 : -1,
 };
 
 Items.propTypes = {
+  filterInfos: arrayOf(object).isRequired as Validator<IFilterInfo[]>,
+  groupBy: func.isRequired,
+  groupHeaderFormatter: func.isRequired,
   items: arrayOf(object).isRequired as Validator<IItem[]>,
+  onItemUpdate: func,
+  sortGroupsBy: func,
 };
 

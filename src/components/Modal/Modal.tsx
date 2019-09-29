@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 
-import { StyledModal } from './StyledModal';
+import { StyledModal } from './styled';
 
 interface IModalProps {
 }
