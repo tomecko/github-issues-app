@@ -13,13 +13,13 @@ export const ModalControls: FunctionComponent<IModalControlsProps> = () => {
     <StyledModalControls>
       <li>
         <StyledModalControl
-          color={'#ff594f'}
+          color="#ff594f"
           onClick={() => context.updateContext({ open: false })}
         />
       </li>
       <li>
         <StyledModalControl
-          color={'#ffbc1b'}
+          color="#ffbc1b"
           onClick={() => {
             console.log('It does nothing, sorry!');
           }}
@@ -27,7 +27,7 @@ export const ModalControls: FunctionComponent<IModalControlsProps> = () => {
       </li>
       <li>
         <StyledModalControl
-          color={'#00cd46'}
+          color="#00cd46"
           onClick={() => context.updateContext({ maximized: !context.maximized })}
         />
       </li>
