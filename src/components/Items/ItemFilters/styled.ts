@@ -10,12 +10,18 @@ export const StyledItemFilters = styled.ul`
 `;
 
 export const StyledItemFilter = styled.li<IItemFilterProps>`
+  align-items: center;
   color: #fff;
   display: flex;
-  font-size: .8em;
+  font-size: .9em;
   padding: 1em;
 
   background: ${props => props.selected ? "#ffffff0c" : "inherit"};
+`;
+
+export const StyledIcon = styled.span`
+  flex-grow: 0;
+  margin-right: 10px;
 `;
 
 export const StyledName = styled.span`

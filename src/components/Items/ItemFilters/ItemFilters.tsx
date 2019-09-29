@@ -4,7 +4,13 @@ import { arrayOf, object, func } from 'prop-types';
 import { IItem } from '../../../model/Item';
 
 import { IFilterInfo, IItemFiltersProps } from './props';
-import { StyledCount, StyledItemFilter, StyledItemFilters, StyledName } from './styled';
+import {
+  StyledCount,
+  StyledIcon,
+  StyledItemFilter,
+  StyledItemFilters,
+  StyledName,
+} from './styled';
 
 const getCount = (items: IItem[], filterFn: (item: IItem) => boolean) =>
   items.filter(filterFn).length;
@@ -19,10 +25,12 @@ export const ItemFilters: FunctionComponent<IItemFiltersProps> = props => {
           onClick={() => onSelected(info)}
           selected={info === filter}
         >
+          <StyledIcon>
+            {info.icon()}
+          </StyledIcon>
           <StyledName>
             {info.name}
           </StyledName>
-          {filter === info ? '*' : ''}
           <StyledCount>
             {getCount(items, info.filterFn)}
           </StyledCount>

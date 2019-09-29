@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledModal = styled.div`
-  height: 500px;
-  width: 600px;
   position: absolute;
   left: 50%;
   top: 50%;
