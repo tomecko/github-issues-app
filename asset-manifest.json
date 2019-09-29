@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/github-issues-app/static/css/main.80b332df.chunk.css",
+    "main.js": "/github-issues-app/static/js/main.74725339.chunk.js",
+    "main.js.map": "/github-issues-app/static/js/main.74725339.chunk.js.map",
+    "runtime-main.js": "/github-issues-app/static/js/runtime-main.49d3f227.js",
+    "runtime-main.js.map": "/github-issues-app/static/js/runtime-main.49d3f227.js.map",
+    "static/css/2.764ccc25.chunk.css": "/github-issues-app/static/css/2.764ccc25.chunk.css",
+    "static/js/2.d8308445.chunk.js": "/github-issues-app/static/js/2.d8308445.chunk.js",
+    "static/js/2.d8308445.chunk.js.map": "/github-issues-app/static/js/2.d8308445.chunk.js.map",
+    "index.html": "/github-issues-app/index.html",
+    "precache-manifest.771a6df1eb40c293307059c763b71198.js": "/github-issues-app/precache-manifest.771a6df1eb40c293307059c763b71198.js",
+    "service-worker.js": "/github-issues-app/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/github-issues-app/static/css/2.764ccc25.chunk.css.map",
+    "static/css/main.80b332df.chunk.css.map": "/github-issues-app/static/css/main.80b332df.chunk.css.map",
+    "static/media/background.jpg": "/github-issues-app/static/media/background.df3df160.jpg",
+    "static/media/icon-closed-issue.ded63a50.svg": "/github-issues-app/static/media/icon-closed-issue.ded63a50.svg",
+    "static/media/icon-github.89b6c978.svg": "/github-issues-app/static/media/icon-github.89b6c978.svg",
+    "static/media/icon-open-issue.e0aa5534.svg": "/github-issues-app/static/media/icon-open-issue.e0aa5534.svg",
+    "static/media/icon-star.276d25ce.svg": "/github-issues-app/static/media/icon-star.276d25ce.svg"
+  }
+}
