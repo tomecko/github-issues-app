@@ -13,6 +13,7 @@ interface IIconProps {
 const Styled = styled(({ full, ...rest }) => <IconStarSVG {...rest} />)<IIconProps>`
   fill: ${props => props.full ? '#21233d' : '#fff'};
   fill-rule: evenodd;
+  transition: fill .2s;
   ${props => props.full ? '' : 'stroke: #e0e0e0;'}
   ${props => props.onClick ? 'cursor: pointer;' : ''}
 `;
