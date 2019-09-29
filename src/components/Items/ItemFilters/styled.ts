@@ -14,8 +14,13 @@ export const StyledItemFilter = styled.li<IItemFilterProps>`
   display: flex;
   font-size: .9em;
   padding: 1em;
+  transition: background-color .3s;
 
   background: ${props => props.selected ? "#ffffff0c" : "inherit"};
+
+  &:hover {
+    background: #ffffff05;
+  }
 `;
 
 export const StyledIcon = styled.span`
