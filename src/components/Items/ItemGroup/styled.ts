@@ -23,5 +23,6 @@ export const StyledItem = styled.li`
   border-radius: 5px;
   font-size: .9em;
   margin-bottom: 5px;
+  max-width: 700px;
   padding: 10px;
 `;
