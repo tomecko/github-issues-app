@@ -2,8 +2,10 @@ import styled from 'styled-components';
 
 export const StyledItems = styled.div`
   display: flex;
+  flex-grow: 1;
   align-items: stretch;
-  height: 500px;
+  overflow: hidden;
+  height: 100%;
 `;
 
 export const StyledSidebar = styled.aside`

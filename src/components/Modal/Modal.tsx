@@ -1,15 +1,8 @@
-import React, { FunctionComponent, ReactNode, createContext, useState } from 'react';
+import React, { FunctionComponent, createContext, useState } from 'react';
 
-import { StyledModal } from './styled';
+import { IModalContext, IModalProps } from './props';
 
-interface IModalProps {
-  children: ReactNode;
-}
-
-export interface IModalContext {
-  maximized: boolean;
-  open: boolean;
-}
+import { StyledModal, StyledModalContent } from './styled';
 
 const defaultContext = {
   maximized: false,
@@ -31,8 +24,10 @@ export const Modal: FunctionComponent<IModalProps> = props => {
   }
   return (
     <ModalContext.Provider value={context}>
-      <StyledModal>
-        {props.children}
+      <StyledModal maximized={state.maximized}>
+        <StyledModalContent maximized={state.maximized}>
+          {props.children}
+        </StyledModalContent>
       </StyledModal>
     </ModalContext.Provider>
   );
