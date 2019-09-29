@@ -2,7 +2,7 @@ import { IItem, ItemStatus } from '../model/Item';
 
 export const mockItems: IItem[] = [
   {
-    createdAt: new Date('2016-07-19 12:00'),
+    createdAt: new Date('2016-07-19 13:00'),
     favourite: true,
     id: 1,
     name: 'Page changes',

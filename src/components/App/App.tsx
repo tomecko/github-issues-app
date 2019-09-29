@@ -17,12 +17,13 @@ const onItemUpdate =
 
 export const App = () => {
   const [items, setItems] = useState(mockItems);
+  const groupByFormat = 'yyyy-MM-dd';
   return (
     <StyledApp>
       <Modal>
         <Items
           filterInfos={mockFilterInfos}
-          groupBy={({ createdAt }) => createdAt.toISOString()}
+          groupBy={({ createdAt }) => format(createdAt, groupByFormat)}
           groupHeaderFormatter={val => format(parseISO(val), 'dd-LL-y')}
           items={items}
           onItemUpdate={onItemUpdate(items, setItems)}
