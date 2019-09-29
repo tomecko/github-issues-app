@@ -1,4 +1,4 @@
-import React, { FunctionComponent, Validator, useState } from 'react';
+import React, { FunctionComponent, Validator, useState, ReactNode } from 'react';
 import { arrayOf, func, object } from 'prop-types';
 
 import { IItem } from '../../model/Item';
@@ -15,6 +15,7 @@ interface IItemsProps {
   groupHeaderFormatter: (key: string) => string;
   items: IItem[];
   onItemUpdate?: (item: Partial<IItem>) => void;
+  sidebarHeader?: () => ReactNode;
   sortGroupsBy?: (a: string, b: string) => number;
 }
 
@@ -25,6 +26,7 @@ export const Items: FunctionComponent<IItemsProps> = props => {
     groupHeaderFormatter,
     items,
     onItemUpdate,
+    sidebarHeader,
     sortGroupsBy,
   } = props;
   const defaultFilter = filterInfos[0];
@@ -37,6 +39,7 @@ export const Items: FunctionComponent<IItemsProps> = props => {
   return (
     <StyledItems>
       <StyledSidebar>
+        {sidebarHeader ? sidebarHeader() : null}
         <ItemFilters
           filter={filter}
           filterInfos={filterInfos}

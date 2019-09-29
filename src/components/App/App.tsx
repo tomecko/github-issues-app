@@ -5,7 +5,7 @@ import { mockFilterInfos, mockItems } from '../../data';
 import { IItem } from '../../model/Item';
 
 import { Items } from '../Items';
-import { Modal } from '../Modal';
+import { Modal, ModalControls } from '../Modal';
 
 import { StyledApp } from './styled';
 
@@ -26,6 +26,7 @@ export const App = () => {
           groupHeaderFormatter={val => format(parseISO(val), 'dd-LL-y')}
           items={items}
           onItemUpdate={onItemUpdate(items, setItems)}
+          sidebarHeader={() => <ModalControls />}
         />
       </Modal>
     </StyledApp>

@@ -1,5 +1,6 @@
+import { ReactNode } from 'react';
+
 import { IItem } from '../../../model/Item';
-import { ReactComponentElement } from 'react';
 
 export interface IItemFiltersProps {
   filter: IFilterInfo;
@@ -10,7 +11,7 @@ export interface IItemFiltersProps {
 
 export interface IFilterInfo {
   filterFn: (item: IItem) => boolean;
-  icon: () => ReactComponentElement<any, any>;
+  icon: () => ReactNode;
   name: string;
 }
 
