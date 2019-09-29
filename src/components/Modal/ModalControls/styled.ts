@@ -12,5 +12,9 @@ export const StyledModalControl = styled.button`
   margin: 0;
   border: 0;
 
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
   ${props => props.color ? `background: ${props.color}` : ''}
 `;

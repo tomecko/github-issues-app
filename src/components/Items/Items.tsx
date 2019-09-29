@@ -7,7 +7,7 @@ import { ItemFilters, IFilterInfo } from './ItemFilters';
 import { ItemGroup } from './ItemGroup';
 import { getItemGroups } from './getItemGroups';
 
-import { StyledItemGroups, StyledItems, StyledSidebar } from './styled';
+import { StyledItemGroups, StyledItems, StyledSidebar, StyledSidebarHeader } from './styled';
 
 interface IItemsProps {
   filterInfos: IFilterInfo[];
@@ -39,7 +39,9 @@ export const Items: FunctionComponent<IItemsProps> = props => {
   return (
     <StyledItems>
       <StyledSidebar>
-        {sidebarHeader ? sidebarHeader() : null}
+        {sidebarHeader
+          ? <StyledSidebarHeader>{sidebarHeader()}</StyledSidebarHeader>
+          : null}
         <ItemFilters
           filter={filter}
           filterInfos={filterInfos}

@@ -11,6 +11,10 @@ export const StyledSidebar = styled.aside`
   min-width: 150px;
 `;
 
+export const StyledSidebarHeader = styled.header`
+  padding: 15px;
+`;
+
 export const StyledItemGroups = styled.main`
   background: #f6f6f6;
   flex-grow: 1;

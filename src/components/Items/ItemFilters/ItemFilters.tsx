@@ -18,25 +18,27 @@ const getCount = (items: IItem[], filterFn: (item: IItem) => boolean) =>
 export const ItemFilters: FunctionComponent<IItemFiltersProps> = props => {
   const { filter, filterInfos, items, onSelected } = props;
   return (
-    <StyledItemFilters>
-      {filterInfos.map((info, i) => (
-        <StyledItemFilter
-          key={i}
-          onClick={() => onSelected(info)}
-          selected={info === filter}
-        >
-          <StyledIcon>
-            {info.icon()}
-          </StyledIcon>
-          <StyledName>
-            {info.name}
-          </StyledName>
-          <StyledCount>
-            {getCount(items, info.filterFn)}
-          </StyledCount>
-        </StyledItemFilter>
-      ))}
-    </StyledItemFilters>
+    <section>
+      <StyledItemFilters>
+        {filterInfos.map((info, i) => (
+          <StyledItemFilter
+            key={i}
+            onClick={() => onSelected(info)}
+            selected={info === filter}
+          >
+            <StyledIcon>
+              {info.icon()}
+            </StyledIcon>
+            <StyledName>
+              {info.name}
+            </StyledName>
+            <StyledCount>
+              {getCount(items, info.filterFn)}
+            </StyledCount>
+          </StyledItemFilter>
+        ))}
+      </StyledItemFilters>
+    </section>
   );
 }
 

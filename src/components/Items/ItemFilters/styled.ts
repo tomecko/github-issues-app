@@ -5,7 +5,6 @@ import { IItemFilterProps } from './props';
 export const StyledItemFilters = styled.ul`
   list-style: none;
   margin: 0;
-  margin-top: 1em;
   padding: 0;
 `;
 
