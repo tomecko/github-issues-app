@@ -1,5 +1,6 @@
 {
   "name": "github-issues-app",
+  "homepage": "https://tomecko.github.io/github-issues-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,6 +20,8 @@
     "typescript": "3.6.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,6 +47,7 @@
     "@types/enzyme-adapter-react-16": "1.0.5",
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.14.0",
+    "gh-pages": "2.1.1",
     "react-test-renderer": "16.10.1"
   }
 }
