@@ -1,5 +1,18 @@
 import styled from 'styled-components';
 
+export const StyledItems = styled.div`
+  align-items: stretch;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  height: 100%;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    width: 100vw;
+  }
+`;
+
 export const StyledSidebar = styled.nav`
   background: #1f2234;
   min-width: 150px;
@@ -8,14 +21,6 @@ export const StyledSidebar = styled.nav`
 export const StyledSidebarHeader = styled.header`
   background: #101022;
   padding: 10px;
-`;
-
-export const StyledItems = styled.div`
-  display: flex;
-  flex-grow: 1;
-  align-items: stretch;
-  overflow: hidden;
-  height: 100%;
 `;
 
 export const StyledItemGroups = styled.main`
