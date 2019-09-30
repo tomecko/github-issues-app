@@ -15,6 +15,7 @@ export const ModalControls: FunctionComponent<IModalControlsProps> = () => {
         <StyledModalControl
           color="#ff594f"
           onClick={() => context.updateContext({ open: false })}
+          title="close the window"
         />
       </li>
       <li>
@@ -23,12 +24,14 @@ export const ModalControls: FunctionComponent<IModalControlsProps> = () => {
           onClick={() => {
             console.log('It does nothing, sorry!');
           }}
+          title="click to do nothing"
         />
       </li>
       <li>
         <StyledModalControl
           color="#00cd46"
           onClick={() => context.updateContext({ maximized: !context.maximized })}
+          title={`click to ${context.maximized ? 'unmaximize' : 'maximize'}`}
         />
       </li>
     </StyledModalControls>

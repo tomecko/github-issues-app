@@ -5,7 +5,7 @@ export const StyledHeading = styled.h2`
   font-size: .7em;
 `;
 
-export const StyledItemGroup = styled.div`
+export const StyledItemGroup = styled.section`
 `;
 
 export const StyledItemList = styled.ul`

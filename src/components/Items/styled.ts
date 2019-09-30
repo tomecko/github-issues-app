@@ -19,6 +19,7 @@ export const StyledSidebarHeader = styled.header`
 
 export const StyledItemGroups = styled.main`
   background: #f6f6f6;
+  box-sizing: border-box;
   flex-grow: 1;
   min-width: 500px;
   overflow-y: auto;
