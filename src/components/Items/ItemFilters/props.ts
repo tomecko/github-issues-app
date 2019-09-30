@@ -15,6 +15,6 @@ export interface IFilterInfo {
   name: string;
 }
 
-export interface IItemFilterProps {
+export interface IStyledItemFilterActionProps {
   selected: boolean;
 }

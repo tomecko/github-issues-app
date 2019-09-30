@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { IItemFilterProps } from './props';
+import { IStyledItemFilterActionProps } from './props';
 
 export const StyledItemFilters = styled.ul`
   list-style: none;
@@ -8,12 +8,24 @@ export const StyledItemFilters = styled.ul`
   padding: 0;
 `;
 
-export const StyledItemFilter = styled.li<IItemFilterProps>`
-  align-items: center;
-  color: #fff;
+export const StyledItemFilter = styled.li`
+`;
+
+export const StyledItemFilterAction = styled.button<IStyledItemFilterActionProps>`
   display: flex;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
   font-size: .9em;
+  outline: 0;
   padding: 1em;
+  text-align: left;
   transition: background-color .3s;
 
   background: ${props => props.selected ? "#ffffff0c" : "inherit"};

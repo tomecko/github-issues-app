@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { IStyledModalProps, IStyledModalContentProps } from './props';
 
 const maximized = `
-  transform: none;
   height: 100%;
+  transform: none;
   width: 100%;
 `;
 const notMaximized = `
@@ -17,6 +17,7 @@ const notMaximized = `
   box-shadow: 0 0 12px #333;
   max-height: 500px;
   opacity: .98;
+  overflow: hidden;
 `;
 
 export const StyledModal = styled.div<IStyledModalProps>`

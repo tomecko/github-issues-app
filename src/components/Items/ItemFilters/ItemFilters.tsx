@@ -8,6 +8,7 @@ import {
   StyledCount,
   StyledIcon,
   StyledItemFilter,
+  StyledItemFilterAction,
   StyledItemFilters,
   StyledName,
 } from './styled';
@@ -24,17 +25,20 @@ export const ItemFilters: FunctionComponent<IItemFiltersProps> = props => {
           <StyledItemFilter
             key={i}
             onClick={() => onSelected(info)}
-            selected={info === filter}
           >
-            <StyledIcon>
-              {info.icon()}
-            </StyledIcon>
-            <StyledName>
-              {info.name}
-            </StyledName>
-            <StyledCount>
-              {getCount(items, info.filterFn)}
-            </StyledCount>
+            <StyledItemFilterAction
+              selected={info === filter}
+            >
+              <StyledIcon>
+                {info.icon()}
+              </StyledIcon>
+              <StyledName>
+                {info.name}
+              </StyledName>
+              <StyledCount>
+                {getCount(items, info.filterFn)}
+              </StyledCount>
+            </StyledItemFilterAction>
           </StyledItemFilter>
         ))}
       </StyledItemFilters>
