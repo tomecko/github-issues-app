@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,KACE,sBACF,CAEA,gBACE,WACF","file":"main.aba70117.chunk.css","sourcesContent":["html {\n  font-family: sans-serif;\n}\n\nhtml, body, #root {\n  height: 100%;\n}\n"]}
