@@ -27,7 +27,7 @@ export const mockItems: IItem[] = [
     favourite: false,
     id: 4,
     name: 'Sidebar changes',
-    status: ItemStatus.Open,
+    status: ItemStatus.Closed,
   },
   {
     createdAt: new Date('2016-07-15 12:00'),
@@ -41,14 +41,14 @@ export const mockItems: IItem[] = [
     favourite: true,
     id: 6,
     name: 'Page visual UI Update Review',
-    status: ItemStatus.Open,
+    status: ItemStatus.Closed,
   },
   {
     createdAt: new Date('2016-07-15 12:00'),
     favourite: false,
     id: 7,
     name: 'Sidebar update',
-    status: ItemStatus.Open,
+    status: ItemStatus.Closed,
   },
   {
     createdAt: new Date('2016-07-14 12:00'),
@@ -62,7 +62,7 @@ export const mockItems: IItem[] = [
     favourite: true,
     id: 9,
     name: 'Visual update & Crash resolve',
-    status: ItemStatus.Open,
+    status: ItemStatus.Closed,
   },
   {
     createdAt: new Date('2016-07-11 12:00'),
