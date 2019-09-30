@@ -14,7 +14,7 @@ export const StyledSidebar = styled.aside`
 `;
 
 export const StyledSidebarHeader = styled.header`
-  padding: 15px;
+  padding: 10px;
 `;
 
 export const StyledItemGroups = styled.main`
