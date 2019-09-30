@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a58a9787a459898b8e9a53818247659d",
+    "revision": "ac54a4461b951ac4ac5669cd3bbe4020",
     "url": "/github-issues-app/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/github-issues-app/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "95ca551b4d8ced14f87c",
+    "revision": "38427dd9bd71b28fcba1",
     "url": "/github-issues-app/static/css/main.aba70117.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/github-issues-app/static/js/2.d8308445.chunk.js"
   },
   {
-    "revision": "95ca551b4d8ced14f87c",
-    "url": "/github-issues-app/static/js/main.6bf803ff.chunk.js"
+    "revision": "38427dd9bd71b28fcba1",
+    "url": "/github-issues-app/static/js/main.703858f2.chunk.js"
   },
   {
     "revision": "18e4be57e65bcf520189",

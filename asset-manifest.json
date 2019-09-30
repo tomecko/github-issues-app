@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/github-issues-app/static/css/main.aba70117.chunk.css",
-    "main.js": "/github-issues-app/static/js/main.6bf803ff.chunk.js",
-    "main.js.map": "/github-issues-app/static/js/main.6bf803ff.chunk.js.map",
+    "main.js": "/github-issues-app/static/js/main.703858f2.chunk.js",
+    "main.js.map": "/github-issues-app/static/js/main.703858f2.chunk.js.map",
     "runtime-main.js": "/github-issues-app/static/js/runtime-main.49d3f227.js",
     "runtime-main.js.map": "/github-issues-app/static/js/runtime-main.49d3f227.js.map",
     "static/css/2.764ccc25.chunk.css": "/github-issues-app/static/css/2.764ccc25.chunk.css",
     "static/js/2.d8308445.chunk.js": "/github-issues-app/static/js/2.d8308445.chunk.js",
     "static/js/2.d8308445.chunk.js.map": "/github-issues-app/static/js/2.d8308445.chunk.js.map",
     "index.html": "/github-issues-app/index.html",
-    "precache-manifest.9762e3c31b85c7c4e51e264860bba3c0.js": "/github-issues-app/precache-manifest.9762e3c31b85c7c4e51e264860bba3c0.js",
+    "precache-manifest.efcb539b755a83a799d35cad1bb298dd.js": "/github-issues-app/precache-manifest.efcb539b755a83a799d35cad1bb298dd.js",
     "service-worker.js": "/github-issues-app/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/github-issues-app/static/css/2.764ccc25.chunk.css.map",
     "static/css/main.aba70117.chunk.css.map": "/github-issues-app/static/css/main.aba70117.chunk.css.map",
