@@ -9,6 +9,7 @@ export const StyledItemFilters = styled.ul`
 `;
 
 export const StyledItemFilter = styled.li`
+  height: 50px;
 `;
 
 export const StyledItemFilterAction = styled.button<IStyledItemFilterActionProps>`
@@ -22,9 +23,10 @@ export const StyledItemFilterAction = styled.button<IStyledItemFilterActionProps
   border: 0;
   color: #fff;
   cursor: pointer;
-  font-size: .9em;
+  font-size: 14px;
+  line-height: 16px;
   outline: 0;
-  padding: 1em;
+  padding: 17px;
   text-align: left;
   transition: background-color .3s;
 
@@ -37,6 +39,7 @@ export const StyledItemFilterAction = styled.button<IStyledItemFilterActionProps
 
 export const StyledIcon = styled.span`
   flex-grow: 0;
+  height: 16px;
   margin-right: 10px;
 `;
 

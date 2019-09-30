@@ -2,10 +2,14 @@ import styled from 'styled-components';
 
 export const StyledHeading = styled.h2`
   color: #9897a1;
-  font-size: .7em;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 7px;
 `;
 
 export const StyledItemGroup = styled.section`
+  margin-bottom: 11px;
 `;
 
 export const StyledItemList = styled.ul`
