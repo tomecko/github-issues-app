@@ -14,7 +14,7 @@ export const StyledItems = styled.div`
 `;
 
 export const StyledSidebar = styled.nav`
-  background: #1f2234;
+  background: #1f2234fd;
   min-width: 150px;
 `;
 

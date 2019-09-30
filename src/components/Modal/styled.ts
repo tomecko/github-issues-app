@@ -16,7 +16,6 @@ const notMaximized = `
   border-radius: 10px;
   box-shadow: 0 0 12px #333;
   max-height: 500px;
-  opacity: .98;
   overflow: hidden;
 `;
 
