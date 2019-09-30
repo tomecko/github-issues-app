@@ -38,9 +38,6 @@ export const ModalControls: FunctionComponent<IModalControlsProps> = () => {
   );
 }
 
-ModalControls.defaultProps = {
-}
-
 ModalControls.propTypes = {
 };
 

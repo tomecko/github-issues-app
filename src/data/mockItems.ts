@@ -1,4 +1,4 @@
-import { IItem, ItemStatus } from '../model/Item';
+import { IItem, ItemStatus } from '../components/Items';
 
 export const mockItems: IItem[] = [
   {

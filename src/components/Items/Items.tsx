@@ -1,7 +1,7 @@
 import React, { FunctionComponent, Validator, useState } from 'react';
 import { arrayOf, func, object } from 'prop-types';
 
-import { IItem } from '../../model/Item';
+import { IItem } from './model/Item';
 
 import { ItemFilters, IFilterInfo } from './ItemFilters';
 import { ItemGroup } from './ItemGroup';
@@ -68,6 +68,7 @@ Items.propTypes = {
   groupHeaderFormatter: func.isRequired,
   items: arrayOf(object).isRequired as Validator<IItem[]>,
   onItemUpdate: func,
+  sidebarHeader: func,
   sortGroupsBy: func,
 };
 

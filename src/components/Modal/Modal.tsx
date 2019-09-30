@@ -33,8 +33,5 @@ export const Modal: FunctionComponent<IModalProps> = props => {
   );
 }
 
-Modal.defaultProps = {
-}
-
 Modal.propTypes = {
 };

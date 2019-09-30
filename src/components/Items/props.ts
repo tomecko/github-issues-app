@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { IItem } from '../../model/Item';
+import { IItem } from './model/Item';
 
 import { IFilterInfo } from './ItemFilters';
 

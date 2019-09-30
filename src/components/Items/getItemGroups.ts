@@ -1,6 +1,6 @@
 import { groupBy } from 'lodash';
 
-import { IItem } from '../../model/Item';
+import { IItem } from './model/Item';
 
 export const getItemGroups = <T>(
   items: IItem[],

@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { IItem, ItemStatus } from './../model/Item';
-import { IFilterInfo } from './../components/Items';
+import { IFilterInfo, IItem, ItemStatus } from './../components/Items';
 
 import { IconGithub, IconOpenIssue, IconClosedIssue } from '../assets/icons';
 

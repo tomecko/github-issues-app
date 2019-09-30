@@ -1,9 +1,11 @@
+import { ItemStatus, IItem } from './model/Item';
+
 import { getItemGroups } from './getItemGroups';
-import { IItem, ItemStatus } from '../../model/Item';
 
 const item1: IItem = {
   createdAt: new Date(),
   favourite: false,
+  id: 1,
   name: 'name 1',
   status: ItemStatus.Open,
 };
@@ -11,6 +13,7 @@ const item1: IItem = {
 const item2: IItem = {
   createdAt: new Date(),
   favourite: true,
+  id: 2,
   name: 'name 2',
   status: ItemStatus.Open,
 };
@@ -18,6 +21,7 @@ const item2: IItem = {
 const item3: IItem = {
   createdAt: new Date(),
   favourite: false,
+  id: 3,
   name: 'name 3',
   status: ItemStatus.Closed,
 };

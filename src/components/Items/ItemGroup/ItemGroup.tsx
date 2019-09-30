@@ -2,7 +2,7 @@ import React, { FunctionComponent, Validator } from 'react';
 import { arrayOf, object, string, func } from 'prop-types';
 
 import { IconStar } from '../../Icons';
-import { IItem } from '../../../model/Item';
+import { IItem } from '../model/Item';
 
 import {
   StyledHeading,
@@ -41,9 +41,6 @@ export const ItemGroup: FunctionComponent<IItemGroupProps> = props => {
     </StyledItemGroup>
   );
 }
-
-ItemGroup.defaultProps = {
-};
 
 ItemGroup.propTypes = {
   heading: string.isRequired,

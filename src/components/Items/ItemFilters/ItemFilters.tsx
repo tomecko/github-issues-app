@@ -1,7 +1,7 @@
 import React, { FunctionComponent, Validator } from 'react';
 import { arrayOf, object, func } from 'prop-types';
 
-import { IItem } from '../../../model/Item';
+import { IItem } from '../model/Item';
 
 import { IFilterInfo, IItemFiltersProps } from './props';
 import {
@@ -46,12 +46,10 @@ export const ItemFilters: FunctionComponent<IItemFiltersProps> = props => {
   );
 }
 
-ItemFilters.defaultProps = {
-};
-
 ItemFilters.propTypes = {
   filter: object.isRequired as Validator<IFilterInfo>,
   filterInfos: arrayOf(object).isRequired as Validator<IFilterInfo[]>,
+  items: arrayOf(object) as Validator<IItem[]>,
   onSelected: func.isRequired,
 };
 

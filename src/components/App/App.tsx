@@ -2,9 +2,8 @@ import React, { useState, Dispatch, SetStateAction } from 'react';
 import { format, parseISO } from 'date-fns';
 
 import { mockFilterInfos, mockItems } from '../../data';
-import { IItem } from '../../model/Item';
 
-import { Items } from '../Items';
+import { IItem, Items } from '../Items';
 import { Modal, ModalControls } from '../Modal';
 
 import { StyledApp } from './styled';
